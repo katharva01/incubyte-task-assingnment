@@ -35,4 +35,9 @@ describe('Spacecraft working check',()=>{
         spacecraft.turnRight();
         expect(spacecraft.direction).toBe("E");
     });
+
+    it("should move up when the 'u' command is given", () => {
+        spacecraft.turnUp();
+        expect(spacecraft.direction).toBe('U');
+    });
 });
