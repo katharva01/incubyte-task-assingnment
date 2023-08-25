@@ -1,4 +1,4 @@
-const {Spacecraft}=require('./Spacecraft.js')
+const {Spacecraft, translateCommands}=require('./Spacecraft.js')
 
 
 describe('Spacecraft working check',()=>{
@@ -44,5 +44,10 @@ describe('Spacecraft working check',()=>{
     it("should move down when the 'd' command is given", () => {
         spacecraft.turnDown();
         expect(spacecraft.direction).toBe('D');
+    });
+
+    it("should return the correct spacecraft object after executing a sequence of commands", () => {
+        const expectedSpacecraft = new Spacecraft(0, 1, -1, "N");
+        expect(translateCommands(['f', 'r', 'u', 'b', 'l'])).toEqual(expectedSpacecraft);
     });
 });

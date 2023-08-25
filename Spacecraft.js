@@ -107,6 +107,29 @@ class Spacecraft{
     }
 }
 
+function translateCommands(commands) {
+    let spacecraft = new Spacecraft(0, 0, 0, "N");
+
+    for (const command of commands) {
+        if (command === "f") {
+            spacecraft.moveForward();
+        } else if (command === "b") {
+            spacecraft.moveBackward();
+        } else if (command === "l") {
+            spacecraft.turnLeft();
+        } else if (command === "r") {
+            spacecraft.turnRight();
+        } else if (command === "u") {
+            spacecraft.turnUp();
+        } else if (command === "d") {
+            spacecraft.turnDown();
+        }
+    }
+
+    return spacecraft;
+}
+
 module.exports={
-    Spacecraft
+    Spacecraft,
+    translateCommands
 }
