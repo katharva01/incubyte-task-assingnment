@@ -25,4 +25,9 @@ describe('Spacecraft working check',()=>{
         spacecraft.moveBackward();
         expect(spacecraft.y).toBe(-1);
     });
+
+    it("should turn left when the 'l' command is given", () => {
+        spacecraft.turnLeft();
+        expect(spacecraft.direction).toBe("W");
+    });
 });

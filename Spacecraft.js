@@ -51,6 +51,29 @@ class Spacecraft{
                 break;
         }
     }
+
+    turnLeft() {
+        switch (this.direction) {
+            case "N":
+                this.direction="W";
+                break;
+            case "S":
+                this.direction="E";
+                break;
+            case "E":
+                this.direction="N";
+                break;
+            case "W":
+                this.direction="S";
+                break;
+            case "U":
+                this.direction="N";
+                break;
+            case "D":
+                this.direction="S";
+                break;
+        }
+    }
 }
 
 module.exports={
