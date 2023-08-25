@@ -20,4 +20,9 @@ describe('Spacecraft working check',()=>{
         spacecraft.moveForward();
         expect(spacecraft.y).toBe(1);
     });
+
+    it("should move backward when the 'b' command is given", () => {
+        spacecraft.moveBackward();
+        expect(spacecraft.y).toBe(-1);
+    });
 });
