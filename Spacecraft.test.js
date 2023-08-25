@@ -1,4 +1,4 @@
-
+const {Spacecraft}=require('./Spacecraft.js')
 
 
 describe('Spacecraft working check',()=>{
