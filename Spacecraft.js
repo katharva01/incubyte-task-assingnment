@@ -101,6 +101,10 @@ class Spacecraft{
     turnUp() {
         this.direction="U";
     }
+
+    turnDown() {
+        this.direction="D";
+    }
 }
 
 module.exports={
