@@ -14,5 +14,10 @@ describe('Spacecraft working check',()=>{
         expect(spacecraft.y).toBe(0);
         expect(spacecraft.z).toBe(0);
         expect(spacecraft.direction).toBe('N');
-    })
+    });
+
+    it("should move forward when the 'f' command is given", () => {
+        spacecraft.moveForward();
+        expect(spacecraft.y).toBe(1);
+    });
 });
